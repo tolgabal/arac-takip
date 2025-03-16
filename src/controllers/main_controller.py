@@ -4,7 +4,7 @@ import os
 # Bir üst klasöre çık, sonra 'models' klasörüne git
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(), '..', 'models')))
 
-from database import DbConnector  # Doğru modül adı ile içe aktar
+from models.database import DbConnector  # Doğru modül adı ile içe aktar
 
 class AracRepository:
     def __init__(self):
