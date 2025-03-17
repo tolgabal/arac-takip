@@ -3,7 +3,7 @@ class Sigorta_Kasko:
         self.id = id
         self.arac_id = arac_id
         self.baslangic_tarihi = baslangic_tarihi
-        self.baslangic_saati = baslangic_Saati
+        self.baslangic_saati = baslangic_saati
         self.police_turu = police_turu
         self.aciklama = aciklama
         self.odeme_turu = odeme_turu
