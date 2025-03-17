@@ -1,5 +1,5 @@
 class Arac:
-    def __init__(self, id=None, plaka="", model_yili=0, marka="", model="", kullanici="", renk="", aktiflik=True):
+    def __init__(self, id=None, plaka="", model_yili="", marka="", model="", kullanici="", renk="", aktiflik=1):
         self.id = id
         self.plaka = plaka
         self.model_yili = model_yili
