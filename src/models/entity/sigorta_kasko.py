@@ -1,4 +1,4 @@
-class Sigorta_Kasko:
+class SigortaKasko:
     def __init__(self, id=0, arac_id=0, baslangic_tarihi="", baslangic_saati="", police_turu="", aciklama="", odeme_turu="", tutar="", odeme_tarihi=""):
         self.id = id
         self.arac_id = arac_id
@@ -11,7 +11,7 @@ class Sigorta_Kasko:
         self.odeme_tarihi = odeme_tarihi
         
     def __repr__(self):
-        return f"Sigorta_Kasko(id={self.id}, arac_id={self.arac_id}, baslangic_tarihi='{self.baslangic_tarihi}', baslangic_saati='{self.baslangic_saati}', police_turu='{self.police_turu}', aciklama='{self.aciklama}', odeme_turu='{self.odeme_turu}', tutar='{self.tutar}', odeme_tarihi='{self.odeme_tarihi}')"
+        return f"SigortaKasko(id={self.id}, arac_id={self.arac_id}, baslangic_tarihi='{self.baslangic_tarihi}', baslangic_saati='{self.baslangic_saati}', police_turu='{self.police_turu}', aciklama='{self.aciklama}', odeme_turu='{self.odeme_turu}', tutar='{self.tutar}', odeme_tarihi='{self.odeme_tarihi}')"
     
     def to_dict(self):
         """Verileri sözlük (dict) formatına çevirir."""
@@ -32,4 +32,4 @@ class Sigorta_Kasko:
         """Veritabanından dönen tuple verisini Sigorta_Kasko nesnesine çevirir."""
         if data is None:
             return None
-        return Sigorta_Kasko(*data)
+        return SigortaKasko(*data)
