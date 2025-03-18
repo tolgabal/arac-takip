@@ -2,8 +2,8 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(), '..', 'models')))
 
-from arac_entity import Arac
-from database import DbConnector
+from models.entity.vehicle import Arac
+from models.database import DbConnector
 
  # Yeni oluşturduğumuz entity sınıfını içe aktardık
 
