@@ -16,7 +16,7 @@ arac_repo = AracRepository()
 bakim_onarim_repo = BakimOnarimRepository()
 
 # Yeni araç ekle
-araba = Arac("20APP98", "2025", "Porsche", "911", "Yussy", "Siyah", 1)
+araba = Arac(0,"20APP98", "2025", "Porsche", "911", "Yussy", "Siyah", 1)
 #arac_repo.insert_arac("34ABC123", "2022", "BMW", "320i", "Ahmet Yılmaz", "Mavi", 1)
 #arac_repo.insert_arac("06DEF456", "2020", "Mercedes", "C200", "Mehmet Kaya", "Siyah", 1)
 arac_repo.insert_arac(araba)
@@ -44,7 +44,7 @@ araclar = arac_repo.get_all_araclar()
 print("Son Güncellenmiş Araçlar:", araclar)
 """
 #Yeni Bakim Onarim Ekle 
-bakim_onarim = BakimOnarim(None,31,"Yag Degisimi", "10.03.2025", "123", "250")
+bakim_onarim = BakimOnarim(0,31,"Yag Degisimi", "10.03.2025", "123", "250")
 bakim_onarim_repo.insert_Bakim_Onarim(bakim_onarim)
 #Tüm Bakim Onarimi Listeleme
 

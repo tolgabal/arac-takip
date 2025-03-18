@@ -12,7 +12,7 @@ class AracRepository:
      def __init__(self):
          self.db = DbConnector()
          self.conn = self.db.connect()
-
+         
      def insert_arac(self, arac: Arac):
          
          """Yeni bir araç ekler."""
