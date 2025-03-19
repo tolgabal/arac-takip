@@ -63,7 +63,12 @@ class AracRepository:
          """Belirtilen ID'ye sahip aracı siler.""" 
          query = "DELETE FROM arac WHERE id = ?"  
          cursor = self.conn.cursor()    
-         cursor.execute(query, (arac_id,))  
+         cursor.execute(query, (arac_id,)) 
+         
+         deleted_rows = cursor.rowcount  # Silinen satır sayısını al
+         if deleted_rows == 0:
+             return f"Uyarı: arac_id={id} bulunamadı, silme işlemi başarısız!"
+         
          self.conn.commit()  
          print(f"Araç (ID: {arac_id}) silindi.") 
         
