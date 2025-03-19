@@ -3,6 +3,7 @@ import sys
 
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(), '..', 'models')))
 from models.database import DbConnector
+from model.entity.arac import Arac
 
 class CezaRepository:
     def __init__(self):
@@ -32,5 +33,5 @@ class CezaRepository:
         select * from ceza where arac_id = ?
         """
         cursor = self.conn.cursor()
-        cursor.execute(query,arac_id)
-        return Arac.from_tuple(cursor.fetchone())
+        cursor.execute(query,(arac_id,))
+        return [Arac.from_tuple(row) for row in cursor.fetchall()]
