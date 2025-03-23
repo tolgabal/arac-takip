@@ -1,5 +1,5 @@
 class BakimOnarim:
-    def __init__(self, id=None, arac_id=None, aciklama="", tarih="", kilometre="", tutar=""):
+    def __init__(self, id=0, arac_id=0, aciklama="", tarih="", kilometre="", tutar=""):
         self.id = id
         self.arac_id = arac_id
         self.aciklama = aciklama

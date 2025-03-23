@@ -1,3 +1,4 @@
+
 class Taksit:
     
     def __init__(self, id = None, sigorta_id = 0, taksit1_tarih = "", taksit2_tarih = "", taksit3_tarih = "", taksit4_tarih = "", taksit5_tarih = "", taksit6_tarih = "", 
