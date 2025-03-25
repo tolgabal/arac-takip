@@ -66,6 +66,13 @@ class AracRepository:
          cursor.execute(query, (arac_id,))  
          self.conn.commit()  
          print(f"Araç (ID: {arac_id}) silindi.") 
+         
+     def get_arac_by_ozellik(self, arama: str):
+        """İstenilen kullanıcıya ait araçları listeler"""
+        query = "Select * FROM arac WHERE plaka LIKE ? OR model_yili LIKE ? OR marka LIKE ? OR model LIKE ? OR kullanici LIKE ? OR  renk LIKE ? "
+        cursor = self.conn.cursor()
+        cursor.execute(query,('%' + arama + '%','%' + arama + '%','%' + arama + '%','%' + arama + '%','%' + arama + '%','%' + arama + '%'))
+        return [Arac.from_tuple(row) for row in cursor.fetchall()]
         
      def close(self): 
          """Veritabanı bağlantısını kapatır.""" 
