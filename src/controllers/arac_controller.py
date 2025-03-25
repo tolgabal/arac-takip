@@ -2,17 +2,17 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(), '..', 'models')))
 
-from models.entity.vehicle import Arac
+from models.entity.arac import Arac
 from models.database import DbConnector
 
  # Yeni oluşturduğumuz entity sınıfını içe aktardık
 
 
 class AracRepository:
-     def _init_(self):
+     def __init__(self):
          self.db = DbConnector()
          self.conn = self.db.connect()
-
+         
      def insert_arac(self, arac: Arac):
          
          """Yeni bir araç ekler."""
@@ -63,12 +63,7 @@ class AracRepository:
          """Belirtilen ID'ye sahip aracı siler.""" 
          query = "DELETE FROM arac WHERE id = ?"  
          cursor = self.conn.cursor()    
-         cursor.execute(query, (arac_id,)) 
-         
-         deleted_rows = cursor.rowcount  # Silinen satır sayısını al
-         if deleted_rows == 0:
-             return f"Uyarı: arac_id={id} bulunamadı, silme işlemi başarısız!"
-         
+         cursor.execute(query, (arac_id,))  
          self.conn.commit()  
          print(f"Araç (ID: {arac_id}) silindi.") 
         

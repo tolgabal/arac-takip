@@ -1,3 +1,4 @@
+
 class Muayene:
     def __init__(self,id=None,arac_id=0,baslangic_tarihi="",bitis_tarihi="",masraf=0):
         self.id=id,
